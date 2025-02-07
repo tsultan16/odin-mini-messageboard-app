@@ -2,10 +2,13 @@ const { Router } = require('express');
 
 const indexRouter = Router();
 
+
 const links = [
     {href: "/", text: "Home"},
     {href: "about", text: " About"},
+    {href: "new", text: " New"},
 ];
+
 const users = ["Rose", "Cake", "Biff"];
 
 const messages = [

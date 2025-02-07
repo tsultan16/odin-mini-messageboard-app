@@ -1,5 +1,7 @@
 <li> 
-    <p> Message: <%= message.text %> </p>
-    <p> User: <%= message.user %> </p>
-    <p> Date: <%= message.date %> </p>
+    <div class="message-container">
+        <p> Message: <%= message.text %> </p>
+        <p> User: <%= message.user %> </p>
+        <p> Added: <%= message.added.toLocaleString() %> </p>
+    </div>
 </li>

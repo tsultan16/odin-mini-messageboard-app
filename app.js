@@ -1,4 +1,5 @@
 const express = require('express');
+const newRouter = require('./routes/newRouter');
 const aboutRouter = require('./routes/aboutRouter');
 const indexRouter = require('./routes/indexRouter');
 const path = require("node:path");
@@ -17,7 +18,8 @@ app.set("view engine", "ejs");
 
 
 
-app.use('/about', aboutRouter)
+app.use('/about', aboutRouter);
+app.use('/new', newRouter);
 app.use('/', indexRouter);
 
 

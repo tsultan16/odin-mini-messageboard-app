@@ -1,3 +1,13 @@
 body {
-    color: blue;
-  }
+    color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.message-container {
+  border: 1px solid green;
+  margin: 1em;
+}
+

@@ -1,6 +1,6 @@
 const { Router } = require('express');
 
-const aboutRouter = Router();
+const newRouter = Router();
 
 const links = [
     {href: "/", text: "Home"},
@@ -9,12 +9,12 @@ const links = [
 ];
 
 // render ejs template file for 'about' route
-aboutRouter.get("/", (req, res) => {
-    res.render("about", { message: "This is the about page", links: links, });
+newRouter.get("/", (req, res) => {
+    res.render("new", { message: "Post new message", links: links, });
 });
 
 
-module.exports = aboutRouter;
+module.exports = newRouter;
 
 
 
