@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+    <body>
+        <%- include('navbar', {links: links}) %>
+        
+        <h1>Post a Message</h1>
+        
+        <form method="POST" action="/new">
+            <label> 
+                <input type="text" placeholder="Enter your name">
+            </label>
+
+            <label>
+                <textarea name="Message" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
+            </label>
+
+            <button type="submit">Post</button>
+        </form>
+        
+        
+        <%- include('footer', {}) %>
+    </body>
+</html>

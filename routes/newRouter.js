@@ -10,7 +10,11 @@ const links = [
 
 // render ejs template file for 'about' route
 newRouter.get("/", (req, res) => {
-    res.render("new", { message: "Post new message", links: links, });
+    res.render("form", { links: links, });
+});
+
+newRouter.post("/", (req, res) => {
+    res.render("form", { links: links, });
 });
 
 

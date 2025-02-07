@@ -27,7 +27,7 @@ const messages = [
 
 // render ejs template file for '/' route
 indexRouter.get("/", (req, res) => {
-    res.render("index", { links: links, messages: messages, users: users });
+    res.render("index", { links: links, title: "Mini Messageboard", messages: messages});
 });
 
 
