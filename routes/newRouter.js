@@ -1,14 +1,8 @@
 const { Router } = require('express');
-const { messages } = require('../db');
+const { messages, links } = require('../db');
 
 
 const newRouter = Router();
-
-const links = [
-    {href: "/", text: "Home"},
-    {href: "about", text: " About"},
-    {href: "new", text: " New"},
-];
 
 // render ejs template file for 'about' route
 newRouter.get("/", (req, res) => {
@@ -22,6 +16,7 @@ newRouter.post("/", (req, res) => {
     console.log(`Message: ${req.body.messageText}`); 
     
     messages.push({
+        id: messages.length, 
         text: req.body.messageText,
         user: req.body.authorName,
         added: new Date()

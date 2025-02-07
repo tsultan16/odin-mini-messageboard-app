@@ -1,7 +1,9 @@
 <li> 
     <div class="message-container">
+        <p> id: <%= message.id %> </p>
         <p> Message: <%= message.text %> </p>
         <p> User: <%= message.user %> </p>
         <p> Added: <%= message.added.toLocaleString() %> </p>
+        <a href="/<%= message.id %>" class="button">Open</a>
     </div>
 </li>
