@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { messages } = require('../db');
 
 const indexRouter = Router();
 
@@ -11,23 +12,11 @@ const links = [
 
 const users = ["Rose", "Cake", "Biff"];
 
-const messages = [
-    {
-        text: "Hi there!",
-        user: "Amando",
-        added: new Date()
-    },
-    {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date()
-    }
-];
-
 
 // render ejs template file for '/' route
 indexRouter.get("/", (req, res) => {
     res.render("index", { links: links, title: "Mini Messageboard", messages: messages});
+    console.log("Rendering index view.");
 });
 
 

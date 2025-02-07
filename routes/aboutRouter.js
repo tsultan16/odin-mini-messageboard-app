@@ -11,6 +11,8 @@ const links = [
 // render ejs template file for 'about' route
 aboutRouter.get("/", (req, res) => {
     res.render("about", { message: "This is the about page", links: links, });
+    console.log("Rendering about view.");
+
 });
 
 
